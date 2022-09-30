@@ -15,7 +15,8 @@ public class Druide {
 		this.effetPotionMax = effetPotionMax;
 		parler("Bonjour, je suis Druide " + name + " et ma potion peut aller de " + effetPotionMin + " à " + effetPotionMax);
 	}
-	
+
+	//GETTERS
 	public String getNom() {
 		return name;
 	}
@@ -23,15 +24,16 @@ public class Druide {
 	public int getForcePotion() {
 		return forcePotion;
 	}
-	
+
+	public String prendreParole() {
+		return "Le Druide " + name + " :";
+	}
+
 	public void parler(String txt) {
 		System.out.println(prendreParole() + " <" + txt + ">");
 	}
 	
-	public String prendreParole() {
-		return "Le Druide " + name + " :";
-	}
-	
+	//VOID
 	public void preparerPotion() {
 		Random r = new Random();
 		forcePotion = r.nextInt(effetPotionMin, effetPotionMax);
@@ -41,18 +43,18 @@ public class Druide {
 			parler("Je n'ai pas trouvé les ingrédients, ma potion est seulement de force");
 		}
 	}
-	
-	public static void main(String[] args) {
-		Druide p = new Druide("Panoramix", 5, 10);
-		p.preparerPotion();
-		System.out.println(p.getForcePotion());
-	}
-	
+
 	public void booster(Gaulois g) {
 		if(g.getName().equals("Obélix")) {
 			System.out.println("Non, pas de potion pour Obélix");
 		}
 	}
-	
-	
+
+	//MAIN TEST
+	public static void main(String[] args) {
+		Druide p = new Druide("Panoramix", 5, 10);
+		p.preparerPotion();
+		System.out.println(p.getForcePotion());
+	}
+
 }

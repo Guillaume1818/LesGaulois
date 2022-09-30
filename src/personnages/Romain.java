@@ -9,19 +9,13 @@ public class Romain {
 		this.name = name;
 		this.force = force;
 	}
-	
+
+	//GETTERS
 	public String getNom() {
 		return name;
 	}
-	
-	public void parler(String txt) {
-		System.out.println(prendreParole() + "<" + txt + ">");
-	}
-	
-	public String prendreParole() {
-		return "Le romain " + name + ": ";
-	}
-	
+
+	//VOID
 	public void recevoirCoup(int forceCoup) {
 		force -=forceCoup;
 		if(force>0) {
@@ -30,6 +24,14 @@ public class Romain {
 			parler("J'abandonne...");
 		}
 	}
+
+	//VOID OUT
+	public void parler(String txt) {
+		System.out.println(prendreParole() + "<" + txt + ">");
+	}
 	
-	
+	public String prendreParole() {
+		return "Le romain " + name + ": ";
+	}
+
 }
