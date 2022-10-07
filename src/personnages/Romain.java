@@ -8,6 +8,7 @@ public class Romain {
 	public Romain(String name, int force) {
 		this.name = name;
 		this.force = force;
+		assert force>0;
 	}
 
 	//GETTERS
@@ -32,6 +33,11 @@ public class Romain {
 	
 	public String prendreParole() {
 		return "Le romain " + name + ": ";
+	}
+
+	//MAIN TEST
+	public static void main(String[] args) {
+		Romain r = new Romain("Minus", 3);
 	}
 
 }
