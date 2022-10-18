@@ -1,6 +1,7 @@
 package scenario;
 
 import personnages.Druide;
+import personnages.Equipement;
 import personnages.Gaulois;
 import personnages.Romain;
 
@@ -15,6 +16,7 @@ public class Main {
 		Romain minus = new Romain("Minus", 6);
 
 		//CALLS
+		minus.sEquiper(Equipement.CASQUE);
 		pano.preparerPotion();
 		pano.booster(obelix);
 
